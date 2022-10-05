@@ -7,21 +7,25 @@ const { Sequelize } = require("sequelize");
 const statuses = require("../utils/statuses");
 
 router.post("/register", (req, res) => {
-  const data = {
-    companyname: req.body.companyname,
-    walletaddress: req.body.walletaddress,
-  };
+    const data = {
+        companyname: req.body.companyname,
+        walletaddress: req.body.walletaddress,
+        membertype: req.body.membertype,
+        ...(req.body.membertype === 'seller' && {projectid: req.body.projectid}),
+        ...(req.body.membertype === 'buyer' && {taxid: req.body.taxid}),
+        email: req.body.email
+    };
 
-  models.RegisteredMembers.create(data)
-    .then((data) => {
-      console.log(data.dataValues.pk);
-      res
-        .status(200)
-        .json({ message: "success", memberid: data.dataValues.pk });
-    })
-    .catch((err) => {
-      res.status(400).json({ message: err });
-    });
+    models.RegisteredMembers.create(data)
+        .then((data) => {
+            // console.log(data.dataValues.pk);
+            res
+                .status(200)
+                .json({message: "success", memberid: data.dataValues.pk});
+        })
+        .catch((err) => {
+            res.status(400).json({message: err});
+        });
 });
 
 router.post("/requestcredit", (req, res) => {
