@@ -80,7 +80,7 @@ let SectionData = {
       ]
     },
     breadcrumbListTwo: {
-      title: 'Buy Credit',
+      title: 'Buy Carbon Credits',
       navList: [
         {
           title: 'Buyer'
@@ -88,10 +88,10 @@ let SectionData = {
       ]
     },
     breadcrumbListThree: {
-      title: 'Ranking',
+      title: 'Sell Carbon Credits',
       navList: [
         {
-          title: 'Ranking'
+          title: 'Seller'
         }
       ]
     },
@@ -197,8 +197,8 @@ let SectionData = {
       title: 'Buyer',
       navList: [{
         id: 2,
-        title: 'Transation History',
-        path: '/activity'
+        title: 'Buy Credits',
+        path: '/buy'
       }
       ]
     },
@@ -206,8 +206,8 @@ let SectionData = {
       title: 'Seller',
       navList: [{
         id: 3,
-        title: 'Transation History',
-        path: '/activity'
+        title: 'Sell Credits',
+        path: '/sell'
       } 
       ]
     },
@@ -5298,50 +5298,22 @@ let SectionData = {
   // footer data
   footerData: {
     content: "A South African blockchain based marketplace for carbon credits.",
-    // footerList: [
-    //   {
-    //     id: 1,
-    //     title: 'Marketplace',
-    //     navList: [
-    //       {
-    //         title: 'Placeholder',
-    //         path: '/explore'
-    //       },
-    //       {
-    //         title: 'Placeholder',
-    //         path: '/explore'
-    //       }
-    //     ]
-    //   },
-    //   {
-    //     id: 2,
-    //     title: 'My Account',
-    //     navList: [
-    //       {
-    //         title: 'Placeholder',
-    //         path: 'profile'
-    //       },
-    //       {
-    //         title: 'Placeholder',
-    //         path: 'offers'
-    //       }
-    //     ]
-    //   },
-    //   {
-    //     id: 3,
-    //     title: 'Company',
-    //     navList: [
-    //       {
-    //         title: 'Placeholder',
-    //         path: 'about-us'
-    //       },
-    //       {
-    //         title: 'Placeholder',
-    //         path: 'blog'
-    //       }
-    //     ]
-    //   }
-    // ],
+    footerList: [
+      {
+        id: 1,
+        title: 'More Info:',
+        navList: [
+          {
+            title: 'About Us',
+            path: '/about-us'
+          },
+          {
+            title: 'Contact Us',
+            path: '/contact'
+          }
+        ]
+      },
+     ],
     
   },
   copyTitle: '© UCT MPhil in Financial Technology Class 2022 built on template by Softnio'

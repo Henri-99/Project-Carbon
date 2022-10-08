@@ -130,6 +130,16 @@ const routes = [
     component: () => import('../pages/Blog.vue')
   },
   {
+    path: '/sell',
+    name: 'sell',
+    component: () => import('../pages/Sell.vue')
+  },
+  {
+    path: '/buy',
+    name: 'buy',
+    component: () => import('../pages/Buy.vue')
+  },
+  {
     path: '/blog-detail-:id',
     name:'NewsDetail',
     component: () => import('../pages/NewsDetail.vue'),
