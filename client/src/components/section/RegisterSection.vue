@@ -41,14 +41,15 @@
                                         <input type="text" class="form-control form-control-s1" >
                                     </div><!-- end form-create-tab-wrap -->
 
-                                        <p class="mb-4 form-text" >{{ SectionData.registerData.termText }}</p>
-                                        <button class="btn btn-dark w-100" type="submit">{{ SectionData.registerData.btnText }}</button>
-                            
+                                    <div class="item-detail-btns mt-4">
                                         <ul class="btns-group d-flex">
-                                       <li class="flex-grow-1" v-for="(list, i) in SectionData.registerData.btns" :key="i"><router-link :to="list.path" class="btn d-block" :class="list.btnClass"><em class="ni" :class="list.icon"></em> {{ list.title }} </router-link></li>
-                                       </ul>
-                                       <p class="mt-3 form-text">{{ SectionData.registerData.haveAccountText }} <router-link :to="SectionData.registerData.btnTextLink" class="btn-link">{{ SectionData.registerData.btnTextTwo }}</router-link></p>
-                                    
+                                         <li class="flex-grow-1">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#placeBidModal" class="btn btn-dark d-block">{{ SectionData.registerData.btnText }}</a>
+                                        </li>
+                                        <li class="flex-grow-1">
+                                        </li>
+                                         </ul>
+                                    </div><!-- end create seller -btns -->
                                 </div><!-- end tab-pane -->
 
                                 <div class="tab-pane fade" id="open-for-bids" role="tabpanel" aria-labelledby="open-for-bids-tab">
@@ -68,19 +69,22 @@
                                     <div class="form-create-tab-wrap">
                                         <label class="mb-2 form-label">Email</label>
                                         <input type="text" class="form-control form-control-s1" >
-
-                                        <p class="mb-4 form-text" >{{ SectionData.registerData2.termText }}</p>
-                                    <button class="btn btn-dark w-100" type="submit">{{ SectionData.registerData2.btnText }}</button>
-                            
-                                     <ul class="btns-group d-flex">
-                                    <li class="flex-grow-1" v-for="(list, i) in SectionData.registerData2.btns" :key="i"><router-link :to="list.path" class="btn d-block" :class="list.btnClass"><em class="ni" :class="list.icon"></em> {{ list.title }} </router-link></li>
-                                    </ul>
-                                    <p class="mt-3 form-text">{{ SectionData.registerData2.haveAccountText }} <router-link :to="SectionData.registerData2.btnTextLink" class="btn-link">{{ SectionData.registerData2.btnTextTwo }}</router-link></p>
-                                    
+                                    </div><!-- end form-create-tab-wrap -->
 
 
+                                    <div class="item-detail-btns mt-4">
+                                        <ul class="btns-group d-flex">
+                                         <li class="flex-grow-1">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#placeBidModal" class="btn btn-dark d-block">{{ SectionData.registerData2.btnText }}</a>
+                                        </li>
+                                        <li class="flex-grow-1">
+                                        </li>
+                                         </ul>
+                                    </div><!-- end create seller -btns -->
 
-                                    </div><!-- end form-create-tab-wrap -->    
+
+
+                                   
 
                                     
                                 </div><!-- end tab-pane -->
@@ -99,6 +103,31 @@
                     </div><!-- end col-lg-6 -->
                 </div><!-- end row -->
             </div><!-- end container -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="placeBidModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">{{ SectionData.placeBidModal.title }}</h4>
+                            <button type="submit" class="btn-close icon-btn" data-bs-dismiss="modal" aria-label="Close">
+                                <em class="ni ni-cross"></em>
+                            </button>
+                        </div><!-- end modal-header -->
+                        <div class="modal-body">
+                            <p class="mb-3" v-html="SectionData.placeBidModal.content"></p>
+                            
+                            <ul class="total-bid-list mb-4">
+                                <li v-for="(list, i) in SectionData.placeBidModal.totalBidList" :key="i"><span>{{ list.title }}</span> <span>{{ list.price }}</span></li>
+                            </ul>
+                           
+                        </div><!-- end modal-body -->
+                    </div><!-- end modal-content -->
+                </div><!-- end modal-dialog -->
+            </div><!-- end modal-->
+
         </section><!-- end register-section -->
 </template>
 

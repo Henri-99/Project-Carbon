@@ -4734,27 +4734,16 @@ let SectionData = {
     },
   ],
   placeBidModal: {
-    title: 'Place a Bid',
-    content: 'You are about to purchase carbon credits from Project 1',
+    title: 'Membership confirmation',
+    content: 'You have sent through an application to join the carbon credit market.',
     labelText: 'Your bid (ETH)',
     labelTextTwo: 'Enter quantity <span class="text-primary">5 available</span>',
     totalBidList: [
       {
-        title: 'Your bidding balance',
-        price: '0.013325 ETH'
+        title: 'Your membership no',
+        price: '123456789'
       },
-      {
-        title: 'Your balance',
-        price: '10.67856 ETH'
-      },
-      {
-        title: 'Service fee 3.5%',
-        price: '0.00325 ETH'
-      },
-      {
-        title: 'You will pay',
-        price: '0.013325 ETH'
-      },
+      
     ],
     btnText: 'Place a Bid',
     btnLink: 'wallet'
