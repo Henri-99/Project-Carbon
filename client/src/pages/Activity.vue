@@ -6,8 +6,20 @@
         <HeaderMain></HeaderMain>
         <!-- hero -->
         <HeroFour classname="hero-title" :title="SectionData.breadcrumbData.breadcrumbListTwo.title" :lists="SectionData.breadcrumbData.breadcrumbListTwo.navList"></HeroFour>
-    </header>
-    <ActivitySection></ActivitySection>
+      </header>
+      <!-- Form -->
+      <WalletConnect />
+      <div class="container">
+        <div class="form-create-tab-wrap">
+              <label class="mb-2 form-label">Amount</label>
+              <input type="number" class="form-control form-control-s1 formWidth" v-model="carbonCr">
+          </div><!-- end form-create-tab-wrap -->
+          <div class="space"></div>
+          <h4>Total Eth: {{ethPrice*carbonCr}}</h4>
+          <div class="space"></div>
+          <button class="btn btn-dark w-40" type="submit">{{ SectionData.registerData3.btnText }}</button>
+      </div>
+      <div class="space"></div>
     <!-- footer -->
     <Footer classname="bg-dark on-dark"></Footer>
 </div><!-- end page-wrap -->
@@ -17,16 +29,31 @@
 // Import component data. You can change the data in the store to reflect in all component
 import SectionData from '@/store/store.js'
 import HeroFour from '@/components/section/HeroFour.vue'
+import WalletConnect from '../components/section/WalletConnect.vue'
 
 export default {
   name: 'Activity',
   components: {
-    HeroFour
+    HeroFour,
+    WalletConnect
   },
   data () {
     return {
-      SectionData
+      SectionData,
+      ethPrice: 0.04,
+      carbonCr: ''
     }
-  }
+  },
 }
+
 </script>
+
+<style>
+  .space {
+    margin-top: 3%;
+  }
+  .formWidth {
+    max-width: 25%;
+  }
+
+</style>

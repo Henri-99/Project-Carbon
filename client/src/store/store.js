@@ -80,10 +80,10 @@ let SectionData = {
       ]
     },
     breadcrumbListTwo: {
-      title: 'Activity',
+      title: 'Buy Credit',
       navList: [
         {
-          title: 'Activity'
+          title: 'Buyer'
         }
       ]
     },
@@ -4392,6 +4392,16 @@ let SectionData = {
     btnText: 'Create Buyer',
     btnTextLink: 'login',
    
+  },
+
+  registerData3: {
+    btnText: 'Buy',
+    btnTextLink: 'login', //needs to be changed to success page
+  },
+
+  registerData4: {
+    btnText: 'Sell',
+    btnTextLink: 'login', //needs to be changed to success page
   },
 
 
