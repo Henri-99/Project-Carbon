@@ -164,11 +164,6 @@ let SectionData = {
       btnClass: 'btn-lg btn-dark',
       title: 'Register',
       path: '/register'
-    },
-    {
-      btnClass: 'btn-lg btn-outline-dark',
-      title: 'Create',
-      path: '/create'
     }
   ],
   // Hero btn data
@@ -186,45 +181,25 @@ let SectionData = {
   ],
   // Header data
   headerData: {
-    btnText: 'Connect Wallet',
-    
+    btnText: 'Become a Member',
    
     menuList: {
       title: 'Home',
-      navList: [
-        {
-          id: 1,
-          title: 'Home Page ',
-          path: '/'
-        },
-        {
-          id: 2,
-          title: 'About',
-          path: '/about-us'
-        },
-        {
-          id: 2,
-          title: 'Contact',
-          path: '/contact'
-        },
-        
+      navList: [{
+        id: 1,
+        title: 'Home Page',
+        path: '/'
+      }
       ]
     },
 
     menuList2: {
       title: 'Buyer',
       navList: [{
-        id: 3,
+        id: 2,
         title: 'Transation History',
         path: '/activity'
-      },
-        {
-          id: 1,
-          title: 'Explore',
-          path: '/explore'
-        }
-        
-        
+      }
       ]
     },
     menuList3: {
@@ -233,13 +208,7 @@ let SectionData = {
         id: 3,
         title: 'Transation History',
         path: '/activity'
-      },
-      {
-        id: 11,
-        title: 'Register Project',
-        path: '/register'
-      }
-        
+      } 
       ]
     },
     menuList4: {
@@ -247,13 +216,8 @@ let SectionData = {
       navList: [{
         id: 2,
         title: 'Activity',
-        path: '/activity-v2'
-      },{
-        id: 6,
-        title: 'Mint/Issue Carbon Credits',
-        path: '/create'
+        path: '/activity'
       }
-        
       ]
     },
     menuList5: {
@@ -4308,7 +4272,7 @@ let SectionData = {
       img: require('@/images/brand/metamask.svg'),
       title: 'Metamask',
       content: 'Start exploring blockchain applications in seconds. Trusted by over 1 million users worldwide.',
-      btnText: 'Connect',
+      btnText: 'Connect Wallet',
       path: 'login'
     },
     
@@ -4319,7 +4283,7 @@ let SectionData = {
       img: require('@/images/brand/metamask.svg'),
       title: 'Metamask',
       btnText: 'Connect',
-      path: 'login'
+      path: 'wallet-v2'
     },
     
   ],
@@ -5334,71 +5298,54 @@ let SectionData = {
   },
   // footer data
   footerData: {
-    content: "South Africa's first digital marketplace for carbon credits.",
-    footerList: [
-      {
-        id: 1,
-        title: 'Marketplace',
-        navList: [
-          {
-            title: 'Placeholder',
-            path: '/explore'
-          },
-          {
-            title: 'Placeholder',
-            path: '/explore'
-          }
-        ]
-      },
-      {
-        id: 2,
-        title: 'My Account',
-        navList: [
-          {
-            title: 'Placeholder',
-            path: 'profile'
-          },
-          {
-            title: 'Placeholder',
-            path: 'offers'
-          }
-        ]
-      },
-      {
-        id: 3,
-        title: 'Company',
-        navList: [
-          {
-            title: 'Placeholder',
-            path: 'about-us'
-          },
-          {
-            title: 'Placeholder',
-            path: 'blog'
-          }
-        ]
-      }
-    ],
-    footerListTwo: [
-      {
-        title: 'Explore',
-        path: '/explore'
-      },
-      {
-        title: 'Activity',
-        path: 'activity'
-      },
-      {
-        title: 'Login',
-        path: 'login'
-      },
-      {
-        title: 'Wallet',
-        path: 'wallet'
-      }
-    ]
+    content: "A South African blockchain based marketplace for carbon credits.",
+    // footerList: [
+    //   {
+    //     id: 1,
+    //     title: 'Marketplace',
+    //     navList: [
+    //       {
+    //         title: 'Placeholder',
+    //         path: '/explore'
+    //       },
+    //       {
+    //         title: 'Placeholder',
+    //         path: '/explore'
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     id: 2,
+    //     title: 'My Account',
+    //     navList: [
+    //       {
+    //         title: 'Placeholder',
+    //         path: 'profile'
+    //       },
+    //       {
+    //         title: 'Placeholder',
+    //         path: 'offers'
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     id: 3,
+    //     title: 'Company',
+    //     navList: [
+    //       {
+    //         title: 'Placeholder',
+    //         path: 'about-us'
+    //       },
+    //       {
+    //         title: 'Placeholder',
+    //         path: 'blog'
+    //       }
+    //     ]
+    //   }
+    // ],
+    
   },
-  copyTitle: 'Disclaimer: Edited Vue Js frontend template used for Carbon Credit Market POC'
+  copyTitle: '© UCT MPhil in Financial Technology Class 2022 built on template by Softnio'
 }
 
 export default SectionData

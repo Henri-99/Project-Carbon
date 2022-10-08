@@ -7,12 +7,8 @@
           <!-- hero -->
           <HeroTwo></HeroTwo>
         </header>
-        <!-- Featured  -->
-        <Featured></Featured>
-        <!-- product  -->
         
-        <!-- Newsletter  -->
-        <Newsletter></Newsletter>
+    
         <!-- Footer  -->
         <Footer classname="bg-dark on-dark"></Footer>
   </div><!-- end page-wrap -->

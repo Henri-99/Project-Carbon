@@ -12,7 +12,7 @@
                         <h1 class="hero-title mb-4">{{ SectionData.heroDataTwo.title }}</h1>
                         <p class="hero-text mb-4 pb-1">{{ SectionData.heroDataTwo.content }}</p>
                         <!-- button group -->
-                        <ButtonGroup :btns="SectionData.btnDataThree" classname="hero-btns"></ButtonGroup>
+                        <!-- <ButtonGroup :btns="SectionData.btnDataThree" classname="hero-btns"></ButtonGroup> -->
                     </div><!-- hero-content -->
                 </div><!-- col-lg-6 -->
             </div><!-- end row -->

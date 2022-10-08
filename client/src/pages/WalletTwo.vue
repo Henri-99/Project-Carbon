@@ -8,7 +8,7 @@
         <HeroFour classname="hero-title" :title="SectionData.breadcrumbData.breadcrumbListFour.title" :lists="SectionData.breadcrumbData.breadcrumbListFour.navList"></HeroFour>
     </header>
     <!-- wallet section -->
-    <WalletSectionTwo></WalletSectionTwo>
+    <WalletConnect></WalletConnect>
     <Footer classname="bg-dark on-dark"></Footer>
 </div><!-- end page-wrap -->
 </template>
@@ -17,12 +17,14 @@
 // Import component data. You can change the data in the store to reflect in all component
 import SectionData from '@/store/store.js'
 import HeroFour from '@/components/section/HeroFour.vue'
+import WalletConnect from '../components/section/WalletConnect.vue';
 
 export default {
   name: 'WalletTwo',
   components: {
-    HeroFour
-  },
+    HeroFour,
+    WalletConnect
+},
   data () {
     return {
       SectionData

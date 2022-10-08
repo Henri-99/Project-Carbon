@@ -1,39 +1,16 @@
 <template>
     <ul class="menu-list ms-lg-auto">
-          <li class="menu-item has-sub">
-              <a href="#" class="menu-link menu-toggle">{{ SectionData.headerData.menuList.title }}</a>
-              <div class="menu-sub">
-                 <ul class="menu-list">
-                      <li class="menu-item" v-for="nav in SectionData.headerData.menuList.navList" :key="nav.id"><router-link :to="nav.path" class="menu-link">{{ nav.title }} <span :class="nav.badgeClass" v-if="nav.badge">{{ nav.badge }}</span></router-link></li>
-                 </ul>
-              </div>
+          <li class="menu-item">
+              <a class="menu-item" v-for="nav in SectionData.headerData.menuList.navList" :key="nav.id"><router-link :to="nav.path" class="menu-link">{{ SectionData.headerData.menuList.title }}</router-link></a>
+          </li>
+          <li class="menu-item">
+              <a class="menu-item" v-for="nav in SectionData.headerData.menuList2.navList" :key="nav.id"><router-link :to="nav.path" class="menu-link">{{ SectionData.headerData.menuList2.title }}</router-link></a>
           </li>
           <li class="menu-item has-sub">
-              <a href="#" class="menu-link menu-toggle">{{ SectionData.headerData.menuList2.title }}</a>
-              <div class="menu-sub">
-                 <ul class="menu-list">
-                      <li class="menu-item" v-for="nav in SectionData.headerData.menuList2.navList" :key="nav.id"><router-link :to="nav.path" class="menu-link">{{ nav.title }} <span :class="nav.badgeClass" v-if="nav.badge">{{ nav.badge }}</span></router-link></li>
-                 </ul>
-              </div>
+              <a class="menu-item" v-for="nav in SectionData.headerData.menuList3.navList" :key="nav.id"><router-link :to="nav.path" class="menu-link">{{ SectionData.headerData.menuList3.title }}</router-link></a>
           </li>
           <li class="menu-item has-sub">
-              <a href="#" class="menu-link menu-toggle">{{ SectionData.headerData.menuList3.title }}</a>
-              <div class="menu-sub">
-                 <ul class="menu-list">
-                      <li class="menu-item" v-for="nav in SectionData.headerData.menuList3.navList" :key="nav.id"><router-link :to="nav.path" class="menu-link">{{ nav.title }}</router-link></li>
-                 </ul>
-              </div>
-          </li>
-          <li class="menu-item has-sub">
-              <a href="#" class="menu-link menu-toggle">{{ SectionData.headerData.menuList4.title }}</a>
-              <div class="menu-sub ">
-                
-                    <ul class="menu-list">
-                        <li class="menu-item" v-for="nav in SectionData.headerData.menuList4.navList" :key="nav.id"><router-link :to="nav.path" class="menu-link">{{ nav.title }} <span :class="nav.badgeClass" v-if="nav.badge">{{ nav.badge }}</span></router-link></li>
-                    </ul>
-                   
-                </div>
-             
+              <a class="menu-item" v-for="nav in SectionData.headerData.menuList4.navList" :key="nav.id"><router-link :to="nav.path" class="menu-link">{{ SectionData.headerData.menuList4.title }}</router-link></a>
           </li>
      </ul>
 </template>
