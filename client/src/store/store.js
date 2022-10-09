@@ -4283,7 +4283,7 @@ let SectionData = {
       img: require('@/images/brand/metamask.svg'),
       title: 'Metamask',
       btnText: 'Connect',
-      path: 'wallet-v2'
+      path: ''
     },
     
   ],
