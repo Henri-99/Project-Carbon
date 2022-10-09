@@ -4754,6 +4754,46 @@ let SectionData = {
     btnText: 'Place a Bid',
     btnLink: 'wallet'
   },
+  buyModal: {
+    title: 'Purchase confirmation',
+    content: 'The below transaction has been executed:',
+    labelText: 'Your bid (ETH)',
+    labelTextTwo: 'Enter quantity <span class="text-primary">5 available</span>',
+    totalBidList: [
+      {
+        title: 'No of tokens:',
+        value: '10'
+      },
+      {
+        title: 'Total Eth cost:',
+        value: '1'
+      },
+
+
+      
+    ],
+    btnText: 'Place a Bid',
+    btnLink: 'wallet'
+  },
+  sellModal: {
+    title: 'Sale confirmation',
+    content: 'The below transaction has been executed:',
+    labelText: 'Your bid (ETH)',
+    labelTextTwo: 'Enter quantity <span class="text-primary">5 available</span>',
+    totalBidList: [
+      {
+        title: 'No of tokens:',
+        value: '200'
+      },
+      {
+        title: 'Total Eth cost:',
+        value: '500'
+      },
+      
+    ],
+    btnText: 'Place a Bid',
+    btnLink: 'wallet'
+  },
   reportModalData: {
     title: 'Why are you reporting?',
     content: "If you believe there's been a violation of EnftyMart's Terms of Service or Community Guidelines, please complete this report.",
