@@ -215,8 +215,8 @@ let SectionData = {
       title: 'Validator',
       navList: [{
         id: 2,
-        title: 'Activity',
-        path: '/activity'
+        title: 'Create',
+        path: '/create'
       }
       ]
     },
@@ -4403,6 +4403,12 @@ let SectionData = {
     btnText: 'Sell',
     btnTextLink: 'login', //needs to be changed to success page
   },
+
+  registerData5: {
+    btnText: 'Issue',
+    btnTextLink: 'login', //needs to be changed to success page
+  },
+
 
 
   // contact data

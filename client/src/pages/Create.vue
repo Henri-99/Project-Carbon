@@ -8,28 +8,25 @@
     <!-- create -->
     <section class="create-section bg-gradient-2 section-space-b pt-4 pt-md-2 mt-md-2">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-lg-8 col-xl-6 mx-auto">
-                    <div class="create-content-box">
-                        <div class="section-head-sm">
-                           
-                            <h1 class="mt-2 mb-3">{{SectionData.createData.title }}</h1>
-                            <p v-html="SectionData.createData.content"></p>
-                        </div>
-                        <div class="row g-gs">
-                            <div class="col-sm-6 col-6" v-for="item in SectionData.createData.cards" :key="item.id">
-                                <router-link :to="item.path" class="card text-center card-full">
-                                    <div class="card-body card-body-s1 d-block">
-                                        <img class="mb-4 create-img" :src="item.img" alt="">
-                                        <span class="text-black fw-bold d-block">{{item.title }}</span>
-                                    </div>
-                                </router-link>
-                            </div><!-- enbd col -->
-                        </div><!-- end row -->
-                        <p class="mt-5">{{SectionData.createData.contentTwo }}</p>
-                    </div><!-- end create-content-box -->
-                </div><!-- end col -->
-            </div><!-- row-->
+            <!-- create -->
+            <div class="container">
+            <div class="form-create-tab-wrap">
+                <h4>Total tokens currently in issue: {{totalCarbCr}}</h4>
+                <div class="space"></div>
+                <h4>Mint and issue new tokens to the market</h4>
+                <div class="space"></div>
+              <label class="mb-2 form-label">Member ID</label>
+              <input type="number" class="form-control form-control-s1 formWidth" v-model="carbonCr">
+              <label class="mb-2 form-label">Quantity</label>
+              <input type="number" class="form-control form-control-s1 formWidth" v-model="carbonCr">
+                </div><!-- end form-create-tab-wrap -->
+                <div class="space"></div>
+                <div class="space"></div>
+                <button class="btn btn-dark w-40" type="submit">{{ SectionData.registerData5.btnText }}</button>
+                </div>
+                <div class="space"></div>
+
+            
         </div><!-- end container -->
     </section><!-- end create-section -->
     <!-- Footer  -->
@@ -44,7 +41,10 @@ export default {
   name: 'Create',
   data () {
     return {
-      SectionData
+      SectionData,
+      ethPrice: 0.04,
+      carbonCr: '',
+      totalCarbCr: 1,
     }
   }
 }
