@@ -14,7 +14,13 @@
           <h5>Current Eth Balance: {{ethPrice*carbonCr}}</h5>
           <h5>Carbon Credit Balance: {{ethPrice*carbonCr}}</h5>
           <div class="space"></div>
-
+          <div class="form-create-tab-wrap align-centre">
+          <label class="mb-2 form-label">Amount of Credits to Sell:</label>
+          <input type="number" class="form-control form-control-s1 formWidth" v-model="carbonCr">
+          </div><!-- end form-create-tab-wrap -->
+          <div class="space"></div>
+            <h4>Total Eth Value: {{ethPrice*carbonCr}}</h4>
+            <div class="space"></div>
           <div class="item-detail-btns mt-4">
                               <ul class="btns-group d-flex">
                             <li class="flex-grow-1">
