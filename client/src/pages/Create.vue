@@ -16,7 +16,7 @@
                 <h4>Mint and issue new tokens to the market</h4>
                 <div class="space"></div>
               <label class="mb-2 form-label">Member ID</label>
-              <input type="number" class="form-control form-control-s1 formWidth" v-model="carbonCr">
+              <input type="text" class="form-control form-control-s1 formWidth">
               <label class="mb-2 form-label">Quantity</label>
               <input type="number" class="form-control form-control-s1 formWidth" v-model="carbonCr">
                 </div><!-- end form-create-tab-wrap -->
