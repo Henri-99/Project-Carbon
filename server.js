@@ -4,6 +4,9 @@ const sequelise = require("./config/db");
 const memberRouter = require("./routes/member");
 const validatorRouter = require("./routes/validator");
 
+// const swaggerJSDoc = require('swagger-jsdoc');
+// const swaggerUi = require('swagger-ui-express');
+
 const Web3 = require("web3");
 const fs = require("fs");
 
@@ -24,6 +27,37 @@ const PORT = process.env.PORT || 3001;
 const HOST = "0.0.0.0";
 
 
+// const swaggerDefinition = {
+//     openapi: '3.0.0',
+//     info: {
+//         title: 'Carbon Credit API',
+//         version: '1.0.0',
+//         description: 'Carbon Credit Market place',
+//         license: {
+//             name: 'Licensed Under MIT',
+//             url: '',
+//         },
+//         contact: {
+//             name: 'Carbon Credit',
+//             url: '',
+//         },
+//     },
+//     servers: [
+//         {
+//             url: 'http://localhost:3001',
+//             description: 'dev',
+//         },
+//     ],
+// };
+//
+// const swaggerOptions = {
+//     swaggerDefinition,
+//     apis: ['./routes/*.js'],
+// };
+//
+// const swaggerSpecs = swaggerJSDoc(swaggerOptions);
+
+
 const app = express();
 app.use(express.static("public"));
 app.use(express.json());
@@ -34,6 +68,7 @@ app.get("/", (req, res) => {
     res.send("Welcome the API is running");
 });
 
+// app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 app.use("/member", memberRouter);
 app.use("/validator", validatorRouter);
 

@@ -36,7 +36,7 @@ router.post("/requestcredit", async (req, res) => {
             status: statuses.PENDING
         }
     })
-    console.log(hasPending)
+    // console.log(hasPending)
 
     if (hasPending){
         res.status(400).send('You already have a pending request')
@@ -90,7 +90,7 @@ router.post("/registrationdata", async (req, res) => {
         const member = await models.RegisteredMembers.findOne({
             where: {walletaddress: req.body.walletaddress},
         });
-        console.log(member)
+        // console.log(member)
         res.send({
             membertype: member.membertype,
             projectid: member.projectid,

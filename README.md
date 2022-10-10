@@ -2,11 +2,11 @@
 
 A carbon-credit marketplace
 
-## Tech Stack 
+## Tech Stack
 
 - Express
 - Vue
-- Solidity 
+- Solidity
 - Truffle
 
 ## Installation
@@ -28,17 +28,17 @@ npm install
 ```
 
 ## Starting the elements at once
-## Building the whole  app 
+## Building the whole  app
 
 - run Ganache and start the workspace linked to the project
-- compile the contracts 
+- compile the contracts
 
 ``` 
 truffle compile
 truffle migrate
 ```
 
-- The command below will build frontend and start the backend 
+- The command below will build frontend and start the backend
 - run it from root folder
 
 ```
@@ -48,9 +48,9 @@ npm run build-app
 - After building the app will be accessible on `https://localhost:3001`
 
 
-## Alternatively starting the elements separately 
+## Alternatively starting the elements separately
 
-### BACKEND 
+### BACKEND
 
 - Start Ganache , compile and migrate contracts as noted above and in the root folder run
 
@@ -60,7 +60,7 @@ npm run dev
 
 - The API will be accessible on `http://localhost:3001`
 
-### FRONTEND 
+### FRONTEND
 
 - Navigate to client folder
 
@@ -83,9 +83,9 @@ truffle migrate
 ```
 
 
-## Other  Truffle commands 
+## Other  Truffle commands
 
-Scaffolding contracts 
+Scaffolding contracts
 
 ``` 
 truffle create contract YourContractName # scaffold a contract
@@ -96,5 +96,7 @@ truffle compile
 
 truffle migrate --reset
 ```
+
+
 
 
