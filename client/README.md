@@ -1,4 +1,4 @@
-# EnftyMart Vue Template
+# client
 
 ## Project setup
 ```
