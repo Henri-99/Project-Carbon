@@ -8,9 +8,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract Vendor is Ownable {
 
     CarbonCreditToken yourToken;
-    uint256 public tokensPerMatic = 100; // 100 tokens per 1 Ether
+    uint256 public tokensPerEther = 100; // 100 tokens per 1 Ether
 
-    event BuyTokens(address buyer, uint256 amountOfMATIC, uint256 amountOfTokens);
+    event BuyTokens(address buyer, uint256 amountOfEther, uint256 amountOfTokens);
 
     constructor() {
     }
@@ -23,7 +23,7 @@ contract Vendor is Ownable {
     function buyTokens() public payable returns (uint256 tokenAmount) {
         require(msg.value > 0, "You need to send some ETHER to proceed");
 
-        uint256 amountToBuy = msg.value * tokensPerMatic;
+        uint256 amountToBuy = msg.value * tokensPerEther;
         uint256 vendorBalance = yourToken.balanceOf(address(this));
         require(vendorBalance >= amountToBuy, "Vendor has insufficient tokens");
 
@@ -40,23 +40,23 @@ contract Vendor is Ownable {
         uint256 userBalance = yourToken.balanceOf(msg.sender);
 
         require(userBalance >= tokenAmountToSell, "You have insufficient tokens");
-        uint256 amountOfMATICToTransfer = tokenAmountToSell / tokensPerMatic;
-        uint256 ownerMATICBalance = address(this).balance;
+        uint256 amountOfEtherToTransfer = tokenAmountToSell / tokensPerEther;
+        uint256 ownerEtherBalance = address(this).balance;
 
-        require(ownerMATICBalance >= amountOfMATICToTransfer, "Vendor has insufficient funds");
+        require(ownerEtherBalance >= amountOfEtherToTransfer, "Vendor has insufficient funds");
         (bool sent) = yourToken.transferFrom(msg.sender, address(this), tokenAmountToSell);
         require(sent, "Failed to transfer tokens from user to vendor");
 
-        (sent,) = msg.sender.call{value : amountOfMATICToTransfer}("");
-        require(sent, "Failed to send MATIC to the user");
+        (sent,) = msg.sender.call{value : amountOfEtherToTransfer}("");
+        require(sent, "Failed to send Ether to the user");
     }
     //-------------------------------------------------------------------------------------------------------------
 
     //only be run by the owner of the contract.
-    //send all the MATIC stored in the smart contract into the owner’s wallet.
+    //send all the Ether stored in the smart contract into the owner’s wallet.
     function withdraw() public onlyOwner {
         uint256 ownerBalance = address(this).balance;
-        require(ownerBalance > 0, "No MATIC present in Vendor");
+        require(ownerBalance > 0, "No Ether present in Vendor");
         (bool sent,) = msg.sender.call{value : address(this).balance}("");
         require(sent, "Failed to withdraw");
     }
